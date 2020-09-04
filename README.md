@@ -1,10 +1,9 @@
 <h1 align="center">
-    <img alt="Pomodoro" src=".github/logo" height="100px" />
+    <img alt="Pomodoro" src=".github/logo.jpg" height="120px" />
     </br>
-    # Pomodoro
+    Pomodoro
 </h1>
 
-Pomodoro
 
 Uma aplicação mobile de um cronometro baseado no sistema de gerenciamento de tempo Pomodoro
 
