@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useCallback } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import Routes from "./src/routes";
+import { AppLoading } from "expo";
+
+import * as Font from "expo-font";
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const onFinish = useCallback(() => {
+    setIsLoading(false);
+  }, [setIsLoading]);
+
+  const loadCustomFonts = useCallback(async () => {
+    setIsLoading(true);
+
+    return await Font.loadAsync({
+      "Poppins-Light": require("./assets/fonts/Poppins-Light.ttf"),
+      "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+      "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+    });
+  }, [setIsLoading]);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      {isLoading ? (
+        <AppLoading startAsync={loadCustomFonts} onFinish={onFinish} />
+      ) : (
+        <NavigationContainer>
+          <Routes />
+        </NavigationContainer>
+      )}
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
