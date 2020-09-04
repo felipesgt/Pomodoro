@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Pomodoro" src=".github/logo.jpg" height="120px" />
+    <img alt="Pomodoro" src=".github/logo.jpg" height="160px" />
     </br>
     Pomodoro
 </h1>
@@ -19,10 +19,6 @@ Uma aplicação mobile de um cronometro baseado no sistema de gerenciamento de t
 ```bash
 $ git clone https://github.com/felipesgt/proffy.git && cd proffy
 ```
-
-2. Executando a Aplicação:
-
-  ### Executando a API
 ```bash
   $ cd server
   # Instalando as dependências do projeto.
