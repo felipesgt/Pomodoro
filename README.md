@@ -17,10 +17,9 @@ Uma aplicação mobile de um cronometro baseado no sistema de gerenciamento de t
 . Clone o projeto com o Git e entre na pasta.
 
 ```bash
-$ git clone https://github.com/felipesgt/proffy.git && cd proffy
+$ git clone https://github.com/felipesgt/Pomodoro.git
 ```
 ```bash
-  $ cd server
   # Instalando as dependências do projeto.
   $ yarn # ou npm install
   # Inicie o App
